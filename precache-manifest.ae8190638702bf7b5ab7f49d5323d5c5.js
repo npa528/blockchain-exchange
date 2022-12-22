@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f0f0f0d82e7c3ac79b876ca4709f0c4a",
+    "revision": "d4f9e9ed23d8996067c4b95d88a57968",
     "url": "/blockchain-exchange/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/blockchain-exchange/static/css/2.5dcc52c6.chunk.css"
   },
   {
-    "revision": "0619cec8cbfcbf7d2346",
+    "revision": "e87be0f60c048a0c8887",
     "url": "/blockchain-exchange/static/css/main.79e9d92f.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/blockchain-exchange/static/js/2.a4204161.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0619cec8cbfcbf7d2346",
-    "url": "/blockchain-exchange/static/js/main.7b94d13e.chunk.js"
+    "revision": "e87be0f60c048a0c8887",
+    "url": "/blockchain-exchange/static/js/main.63b7f855.chunk.js"
   },
   {
     "revision": "a93aedbdd926e3c63f34",

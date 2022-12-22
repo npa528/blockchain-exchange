@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/blockchain-exchange/static/css/main.79e9d92f.chunk.css",
-    "main.js": "/blockchain-exchange/static/js/main.7b94d13e.chunk.js",
-    "main.js.map": "/blockchain-exchange/static/js/main.7b94d13e.chunk.js.map",
+    "main.js": "/blockchain-exchange/static/js/main.63b7f855.chunk.js",
+    "main.js.map": "/blockchain-exchange/static/js/main.63b7f855.chunk.js.map",
     "runtime-main.js": "/blockchain-exchange/static/js/runtime-main.e1e99a3e.js",
     "runtime-main.js.map": "/blockchain-exchange/static/js/runtime-main.e1e99a3e.js.map",
     "static/css/2.5dcc52c6.chunk.css": "/blockchain-exchange/static/css/2.5dcc52c6.chunk.css",
     "static/js/2.a4204161.chunk.js": "/blockchain-exchange/static/js/2.a4204161.chunk.js",
     "static/js/2.a4204161.chunk.js.map": "/blockchain-exchange/static/js/2.a4204161.chunk.js.map",
     "index.html": "/blockchain-exchange/index.html",
-    "precache-manifest.db307c26c9e299bd2e03e3c6975cdd00.js": "/blockchain-exchange/precache-manifest.db307c26c9e299bd2e03e3c6975cdd00.js",
+    "precache-manifest.ae8190638702bf7b5ab7f49d5323d5c5.js": "/blockchain-exchange/precache-manifest.ae8190638702bf7b5ab7f49d5323d5c5.js",
     "service-worker.js": "/blockchain-exchange/service-worker.js",
     "static/css/2.5dcc52c6.chunk.css.map": "/blockchain-exchange/static/css/2.5dcc52c6.chunk.css.map",
     "static/css/main.79e9d92f.chunk.css.map": "/blockchain-exchange/static/css/main.79e9d92f.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.5dcc52c6.chunk.css",
     "static/js/2.a4204161.chunk.js",
     "static/css/main.79e9d92f.chunk.css",
-    "static/js/main.7b94d13e.chunk.js"
+    "static/js/main.63b7f855.chunk.js"
   ]
 }
