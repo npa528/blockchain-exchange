@@ -3,7 +3,7 @@ require('babel-polyfill');
 require('dotenv').config();
 const HDWalletProvider = require("@truffle/hdwallet-provider");
 const privateKeys = process.env.PRIVATE_KEYS || ""
-const privateKey = process.env.PRIVATE_KEY || ""
+const safeUsersPrivateKey = process.env.SAFE_USERS_PRIVATE_KEYS || "" // 'Safe Test' 3 and 4 accounts from developer's Metamask
 
 module.exports = {
   networks: {
@@ -26,12 +26,12 @@ module.exports = {
     goerli: {
       provider: function() {
         return new HDWalletProvider(
-          privateKey, // Array of account private keys
+          safeUsersPrivateKey.split(','), // Array of account private keys
           `https://goerli.infura.io/v3/${process.env.INFURA_API_KEY}`// Url to an Ethereum Node
         )
       },
       gas: 5000000,
-      gasPrice: 25000000000,
+      gasPrice: 2500000,
       network_id: 5
     }
   },

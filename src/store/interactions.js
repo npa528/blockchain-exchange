@@ -27,16 +27,32 @@ import Exchange from '../abis/Exchange.json'
 import { ETHER_ADDRESS } from '../helpers'
 
 export const loadWeb3 = (dispatch) => {
-  const web3 = new Web3(Web3.givenProvider || "http://localhost:8545")
+  const web3 = new Web3(Web3.givenProvider || "http://localhost:3000")
   dispatch(web3Loaded(web3))
   return web3
 }
 
+// export const loadWeb3 = (dispatch) => {
+//   if(typeof window.ethereum!=='undefined'){
+//     const web3 = new Web3(Web3.givenProvider || "http://localhost:3000")
+//     dispatch(web3Loaded(web3))
+//     return web3
+//   } else {
+//     window.alert('Please install MetaMask')
+//     window.location.assign("https://metamask.io/")
+//   }
+// }
+
 export const loadAccount = async (web3, dispatch) => {
   const accounts = await web3.eth.getAccounts()
-  const account = accounts[0]
-  dispatch(web3AccountLoaded(account))
-  return account
+  const account = await accounts[0]
+  if(typeof account !== 'undefined'){
+    dispatch(web3AccountLoaded(account))
+    return account
+  } else {
+    window.alert('Please login with MetaMask')
+    return null
+  }
 }
 
 export const loadToken = async(web3, networkId, dispatch) => {

@@ -2,8 +2,7 @@ const Token = artifacts.require('Token')
 const Exchange = artifacts.require('Exchange')
 
 // Utils
-// const ETHER_ADDRESS = '0x0000000000000000000000000000000000000000' // Ether token deposit address
-const ETHER_ADDRESS = '0x05E3Bd725678352E24d79D2266e12129EdB69474' // Ether token deposit address
+const ETHER_ADDRESS = '0x0000000000000000000000000000000000000000' // Ether token deposit address
 const ether = (n) => {
   return new web3.utils.BN(
     web3.utils.toWei(n.toString(), 'ether')
@@ -34,6 +33,10 @@ module.exports = async function(callback) {
       // Give tokens to account[1]
       const sender = accounts[0]
       const receiver = accounts[1]
+
+      console.log("Sender!: " + sender);
+      console.log("Receiver!: " + receiver);
+
       let amount = web3.utils.toWei('10000', 'ether') // 10.000 tokens
 
       await token.transfer(receiver, amount, { from: sender })
@@ -64,7 +67,7 @@ module.exports = async function(callback) {
       // User1 makes order to get Tokens
       let result
       let orderId
-      result = await exchange.makeOrder(token.address, tokens(100), ETHER_ADDRESS, ether(0.1), { from: user1 })
+      result = await exchange.makeOrder(token.address, tokens(100), ETHER_ADDRESS, ether(0.01), { from: user1 })
       console.log('Made order from ${user1}')
 
       // User 1 cancells order
@@ -77,7 +80,7 @@ module.exports = async function(callback) {
       //
 
       // User 1 makes order
-      result = await exchange.makeOrder(token.address, tokens(100), ETHER_ADDRESS, ether(0.1), { from: user1 })
+      result = await exchange.makeOrder(token.address, tokens(100), ETHER_ADDRESS, ether(0.01), { from: user1 })
       console.log(`Made order from ${user1}`)
 
       // User 2 fills order
@@ -101,7 +104,7 @@ module.exports = async function(callback) {
       await wait(1)
 
       // User 1 makes final order
-      result = await exchange.makeOrder(token.address, tokens(200), ETHER_ADDRESS, ether(0.15), { from: user1 })
+      result = await exchange.makeOrder(token.address, tokens(200), ETHER_ADDRESS, ether(0.015), { from: user1 })
       console.log(`Made order from ${user1}`)
 
       // User 2 fills final order
